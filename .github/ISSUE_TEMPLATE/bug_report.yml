@@ -1,0 +1,51 @@
+name: Bug report
+description: Report broken behavior
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting. Please fill out everything you can.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe the actual behavior.
+      placeholder: When the trigger fires, I expected X but got Y.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Configure ...
+        2. Trigger ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Apps Script execution logs
+      description: Copy the relevant log output (redact webhook URLs).
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: v0.1.0 or commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: timezone
+    attributes:
+      label: Script timezone
+      options:
+        - Same as appsscript.json default
+        - Custom (specify in description)

@@ -1,0 +1,2 @@
+# clasp pushes from rootDir (./dist) — list anything inside dist/ that should NOT be pushed.
+# Currently nothing extra to exclude; build output is clean.

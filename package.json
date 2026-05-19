@@ -1,0 +1,40 @@
+{
+  "name": "meetings-reminder",
+  "version": "0.1.0",
+  "description": "Google Apps Script that sends Discord webhook notifications before Google Calendar meetings start.",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "bun run build.ts",
+    "build:watch": "bun run build.ts --watch",
+    "clean": "rm -rf dist coverage",
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\" \"build.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" \"test/**/*.ts\" \"build.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"build.ts\" \"*.{md,json,cjs,toml}\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\" \"build.ts\" \"*.{md,json,cjs,toml}\"",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "verify": "bun run lint && bun run typecheck && bun test",
+    "push": "bun run build && clasp push -f",
+    "pull": "clasp pull",
+    "logs": "clasp logs --watch",
+    "open": "clasp open",
+    "prepush": "bun run verify && bun run build"
+  },
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/bun": "^1.1.0",
+    "@types/google-apps-script": "^1.0.83",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.0"
+  }
+}
