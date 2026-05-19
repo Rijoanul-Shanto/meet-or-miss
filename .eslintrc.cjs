@@ -54,5 +54,15 @@ module.exports = {
     node: true,
     es2022: true,
   },
+  overrides: [
+    {
+      files: ['test/**/*.ts'],
+      rules: {
+        '@typescript-eslint/unbound-method': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+      },
+    },
+  ],
   ignorePatterns: ['dist/', 'coverage/', 'node_modules/', '*.mjs', '*.cjs'],
 };

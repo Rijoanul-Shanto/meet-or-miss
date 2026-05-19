@@ -2,8 +2,8 @@
 // public functions onto globalThis so the post-build footer can expose them
 // as top-level declarations that Apps Script triggers can discover.
 
-import { checkUpcomingMeetings } from './main';
 import { healthCheck } from './healthCheck';
+import { checkUpcomingMeetings } from './main';
 
 const g = globalThis as Record<string, unknown>;
 g.__meetingsReminder_check = checkUpcomingMeetings;
