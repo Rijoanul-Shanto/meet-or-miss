@@ -27,7 +27,7 @@
   "devDependencies": {
     "@google/clasp": "^2.4.2",
     "@types/bun": "^1.1.0",
-    "@types/google-apps-script": "^1.0.83",
+    "@types/google-apps-script": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^8.57.0",
